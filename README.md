@@ -1,6 +1,6 @@
 # wg-easy-client
 
-A Node.js client for managing WireGuard Easy instances via API. This package allows you to create, delete, and manage WireGuard clients programmatically. It also includes an interactive CLI tool for testing API calls.
+A Node.js client for managing [wg-easy](https://github.com/wg-easy/wg-easy) ([docker hub](https://hub.docker.com/r/weejewel/wg-easy)) instance via API. This package allows you to create, delete, and manage WireGuard clients programmatically. It also includes an interactive CLI tool for testing API calls.
 
 ## 🚀 Features
 

@@ -169,4 +169,15 @@ export class WgEasyClient {
     const client = clients.find((c) => c.name === name)
     return client ? client.id : null
   }
+
+  /**
+   *
+   * @param {string} subname - Client subnames
+   * @returns {Promise<string[] | null>} - Client IDs
+   */
+  async getCleintIdsBySubname(subname: string): Promise<string[] | null> {
+    const clients = await this.getClients()
+    const clientIds = clients.filter((c) => c.name.includes(subname)).map((c) => c.id)
+    return clientIds
+  }
 }

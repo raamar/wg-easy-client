@@ -1,6 +1,6 @@
 {
   "name": "wg-easy-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js client for managing WireGuard Easy instances via API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -18,6 +18,13 @@ npm install wg-easy-client
 
 ## 🚀 Usage
 
+### 0️⃣ Setup .env
+
+```
+PASSWORD=YOUR_PASSWORD
+WG_EASY_URL=YOUR_WG_EASY_URL
+```
+
 ### 1️⃣ Import and Use in Code
 
 ```ts

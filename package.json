@@ -1,0 +1,46 @@
+{
+  "name": "wg-easy-client",
+  "version": "1.0.0",
+  "description": "A Node.js client for managing WireGuard Easy instances via API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "wg-easy-cli": "./dist/cli.js"
+  },
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"No tests yet\"",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raamar/wg-easy-client"
+  },
+  "keywords": [
+    "wg-easy",
+    "wireguard",
+    "vpn",
+    "nodejs",
+    "typescript",
+    "api-client"
+  ],
+  "author": "raamar",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "@types/node": "^20.5.7",
+    "@types/tough-cookie": "^4.0.1",
+    "ts-node": "^10.9.1"
+  }
+}

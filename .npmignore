@@ -1,0 +1,11 @@
+# Ignore development files
+src/
+tests/
+*.ts
+*.tsx
+tsconfig.json
+*.map
+.env
+.gitignore
+.npmignore
+README.md

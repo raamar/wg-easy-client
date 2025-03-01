@@ -29,8 +29,11 @@ WG_EASY_URL=YOUR_WG_EASY_URL
 
 ```ts
 import { WgEasyClient } from 'wg-easy-client'
+import dotenv from 'dotenv'
 
-const client = new WgEasyClient('http://localhost:51821', 'PASSWORD')
+dotenv.config()
+
+const client = new WgEasyClient()
 
 void (async () => {
   await client.createClient('test-client')

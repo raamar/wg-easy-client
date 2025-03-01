@@ -11,11 +11,13 @@ export class WgEasyClient {
   private sessionCookie: string | null = null // Store session cookie
 
   /**
-   * @param {string} baseURL - The base URL of the WireGuard Easy server
+   *
+   * @param {string?} baseURL
+   * @param {string?} password
    */
-  constructor() {
-    this.baseURL = process.env.WG_EASY_URL || ''
-    this.password = process.env.PASSWORD || ''
+  constructor(baseURL?: string, password?: string) {
+    this.baseURL = baseURL || process.env.WG_EASY_URL || ''
+    this.password = password || process.env.PASSWORD || ''
 
     if (!this.baseURL) {
       throw new Error('⚠️ Missing WG_EASY_URL in .env file!')

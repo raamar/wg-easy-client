@@ -30,9 +30,9 @@ WG_EASY_URL=YOUR_WG_EASY_URL
 ```ts
 import { WgEasyClient } from 'wg-easy-client'
 
-const client = new WgEasyClient('http://localhost:51821')
+const client = new WgEasyClient('http://localhost:51821', 'PASSWORD')
 
-;(async () => {
+void (async () => {
   await client.createClient('test-client')
   console.log(await client.getClients())
 })()
@@ -43,13 +43,13 @@ const client = new WgEasyClient('http://localhost:51821')
 After installation, you can run the CLI tool to test the API:
 
 ```sh
-npx wg-easy-cli
+PASSWORD=YOUR_PASSWORD WG_EASY_URL=YOUR_URL npx wg-easy-cli
 ```
 
 or, if installed globally:
 
 ```sh
-wg-easy-cli
+PASSWORD=YOUR_PASSWORD WG_EASY_URL=YOUR_URL wg-easy-cli
 ```
 
 ## 🔧 API Methods

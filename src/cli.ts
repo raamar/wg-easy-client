@@ -43,6 +43,7 @@ async function main() {
     console.log('4. Disable a client')
     console.log('5. List clients')
     console.log('6. Get client ID by name')
+    console.log('7. Get client IDs by subname')
     console.log('0. Exit')
 
     const choice = await prompt('Select an action (1-6): ')
@@ -90,6 +91,17 @@ async function main() {
           const clientId = await client.getClientIdByName(name)
           if (clientId) {
             console.log(`✅ Client ID: ${clientId}`)
+          } else {
+            console.log('❌ Client not found.')
+          }
+          break
+        }
+        case '7': {
+          const subname = await prompt('Enter client subname: ')
+          const clientIds = await client.getCleintIdsBySubname(subname)
+          if (clientIds?.length) {
+            console.log(`✅ Client IDs`)
+            console.dir(clientIds)
           } else {
             console.log('❌ Client not found.')
           }
